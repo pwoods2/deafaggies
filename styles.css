@@ -15,6 +15,15 @@ h2 {
     color: #333;
 }
 
+.banner {
+    background-color: #5000; /* For a solid color */
+    /* background-image: url('path/to/your/image.jpg'); Uncomment this line for a background image */
+    background-size: cover; /* For image background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
 nav {
     text-align: center;
     margin-bottom: 20px;
