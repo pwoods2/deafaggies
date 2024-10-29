@@ -3,15 +3,17 @@ body {
     font-family: Times, serif;
     margin: 0;
     padding: 20px;
-    background-color: #white;
+    background-color: #FFF;
 }
 
 h1 {
     color: #333;
+    text-align:center;
 }
 
 nav {
     margin: 20px 0;
+    text-align: center;
 }
 
 nav a {
