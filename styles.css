@@ -5,15 +5,16 @@ body {
     background-color: #f4f4f4;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     color: #333;
 }
-
+/*
 h2 {
     text-align: center;
     color: #333;
 }
+*/
 
 .banner {
     background-color: #5000; /* For a solid color */
@@ -37,6 +38,30 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+.column-layout {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the columns */
+    margin: 20px 0; /* Margin between sections */
+}
+
+.column-layout > div {
+    width: 45%; /* Set column width */
+    margin: 0 20px; /* Space between columns */
+    text-align: center; /* Center text in each column */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .column-layout {
+        flex-direction: column; /* Stack columns on smaller screens */
+    }
+
+    .column-layout > div {
+        width: 100%; /* Full width on smaller screens */
+        margin: 10px 0; /* Margin for stacked layout */
+    }
 }
 
 .container {
