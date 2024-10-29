@@ -17,12 +17,15 @@ h2 {
 */
 
 .banner {
-    background-color: #500000; /* For a solid color */
-    /* background-image: url('path/to/your/image.jpg'); Uncomment this line for a background image */
-    background-size: cover; /* For image background */
-    color: white; /* Text color for the banner*/
+    background-color: #500000; /* Solid color for the banner */
+    color: white; /* Text color for the banner */
     text-align: center;
     padding: 20px;
+    /* Optional: add height to make it more visible */
+    height: 100px; /* Set height for the banner */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
 }
 
 nav {
