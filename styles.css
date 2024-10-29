@@ -1,27 +1,56 @@
 /* styles.css */
 body {
-    font-family: Times, serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #FFF;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
 }
 
 h1 {
+    text-align: center;
     color: #333;
-    text-align:center;
 }
 
 nav {
-    margin: 20px 0;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #707070;
+    color: #007BFF; /* Link color */
 }
 
 nav a:hover {
     text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item img {
+    max-width: 300px; /* Adjust as needed */
+    margin-left: 20px; /* Space between text and image */
+}
+
+.item p {
+    flex: 1; /* Allow the paragraph to take up remaining space */
+    line-height: 1.6;
+}
+
+/* Alternate layout */
+.item:nth-child(odd) {
+    flex-direction: row; /* Text on the left, image on the right */
+}
+
+.item:nth-child(even) {
+    flex-direction: row-reverse; /* Image on the left, text on the right */
 }
