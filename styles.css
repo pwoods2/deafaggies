@@ -54,3 +54,5 @@ nav a:hover {
 .item:nth-child(even) {
     flex-direction: row-reverse; /* Image on the left, text on the right */
 }
+
+/* Comments */
