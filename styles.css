@@ -18,7 +18,7 @@ nav {
 nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #007BFF; /* Link color */
+    color: #707070; /* Link color */
 }
 
 nav a:hover {
