@@ -17,7 +17,7 @@ h2 {
 */
 
 .banner {
-    background-color: #5000; /* For a solid color */
+    background-color: #500000; /* For a solid color */
     /* background-image: url('path/to/your/image.jpg'); Uncomment this line for a background image */
     background-size: cover; /* For image background */
     color: white;
