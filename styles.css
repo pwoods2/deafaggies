@@ -1,6 +1,6 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 20px;
     background-color: #f4f4f4;
 }
@@ -20,7 +20,7 @@ h2 {
     background-color: #500000; /* For a solid color */
     /* background-image: url('path/to/your/image.jpg'); Uncomment this line for a background image */
     background-size: cover; /* For image background */
-    color: white;
+    color: white; /* Text color for the banner*/
     text-align: center;
     padding: 20px;
 }
@@ -44,6 +44,7 @@ nav a:hover {
     display: flex; /* Use flexbox for layout */
     justify-content: center; /* Center the columns */
     margin: 20px 0; /* Margin between sections */
+    color: #333; /* Ensure text for paragraphs is dark */
 }
 
 .column-layout > div {
@@ -83,6 +84,7 @@ nav a:hover {
 .item p {
     flex: 1; /* Allow the paragraph to take up remaining space */
     line-height: 1.6;
+    color: #333; /* Ensure paragraph text is dark */
 }
 
 /* Alternate layout */
