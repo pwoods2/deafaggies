@@ -2,7 +2,7 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
-    background-image: url('images/background.jpg');  /* Path to your background image */
+    background-image: url('images/backgroundDeAF.png');  /* Path to your background image */
     background-size: cover;         /* Ensures the image covers the entire background */
     background-attachment: fixed;   /* Keeps the image fixed as the page scrolls */
     background-position: center;    /* Centers the background image */
