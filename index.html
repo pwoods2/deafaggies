@@ -86,8 +86,10 @@
             });
         });
 
-        // Display the home section by default
-        document.getElementById('home').style.display = 'block';
+    // Load section based on URL hash or set a default section
+    const defaultSectionId = window.location.hash ? window.location.hash.substring(1) : 'home';
+    contentDivs.forEach(div => div.style.display = 'none');  // Hide all sections initially
+    document.getElementById(defaultSectionId).style.display = 'block';
     </script>
 </body>
 </html>
