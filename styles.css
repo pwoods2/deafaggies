@@ -5,16 +5,16 @@ body {
     background-color: #eaeaea;
 }
 
-h1, h2 {
+h1 {
     text-align: center;
     color: #eaeaea;
 }
-/*
+
 h2 {
     text-align: center;
     color: #333;
 }
-*/
+
 
 .banner {
     background-color: #500000; /* Solid color for the banner */
