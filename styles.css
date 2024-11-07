@@ -35,13 +35,19 @@ nav {
 
 nav a {
     margin: 0 15px;
+    padding: 10px 20px;          /* Add padding for button shape */
     text-decoration: none;
-    color: #3c001c; /* Link color */
+    color: white;                /* Text color for the button */
+    background-color: #500000   /* Button background color */
+    border-radius: 20px;         /* Makes the button oval-shaped */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #500000;   /* Darker color on hover */
+    text-decoration: none;       /* Ensure text decoration is removed on hover */
 }
+
 
 .column-layout {
     display: flex; /* Use flexbox for layout */
