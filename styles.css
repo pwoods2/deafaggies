@@ -44,7 +44,7 @@ nav a {
     padding: 10px 20px;          /* Add padding for button shape */
     text-decoration: none;
     color: white;                /* Text color for the button */
-    background-color: #500000   /* Button background color */
+    background-color: #500000;   /* Button background color */
     border-radius: 20px;         /* Makes the button oval-shaped */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
