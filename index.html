@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeAF Website</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
     <!-- Comments: linking to the CSS file -->
 </head>
-    
 <body>
     <div class="banner">
-    <h1>Howdy!</h1>
+        <h1>Howdy!</h1>
     </div>
-    
-<br>
 
+    <br>
+   
     <!-- Comments: creating the navigation section -->    
     <nav>
         <a href="#home">Home</a>
@@ -22,19 +21,17 @@
         <a href="#events">Events and Upcoming</a>
         <a href="#meetings">Meetings and Meeting Notes</a>
     </nav>
-
+    
     <!-- Comments: creating content for each page -->
     <div id="content">
-    
+
         <!-- Comments: home page -->
         <div id="home">
             <h2>Welcome to the official website for DeAF!</h2>
-
             <!-- Alternating text and image section -->
             <div class="container">
                 <div class="item">
-                    <p>We are so happy you're here! You can find information about us, 
-                        ways to contact us, and meeting information and slides here.</p>
+                    <p>We are so happy you're here! You can find information about us, ways to contact us, and meeting information and slides here.</p>
                     <img src="images/iloveyousign.png" alt="I Love You Hand Sign" class="image">
                 </div>
             </div>
@@ -43,8 +40,6 @@
         <!-- Comments: meetings page -->
         <div id="meetings">
             <h2>All slides and meeting notes will be posted here!</h2>
-
-            <!-- Alternating text and image section -->
             <div class="container">
                 <div class="item">
                     <p>This is the first text paragraph. It provides information about the first image next to it.</p>
@@ -52,11 +47,10 @@
                 </div>
             </div>
         </div>
-   
+        
         <!-- Comments: events page -->
         <div id="events">
             <h2>Here is all the information regarding upcoming events!</h2>
-
             <!-- Alternating text and image section -->
             <div class="container">
                 <div class="item">
@@ -65,17 +59,17 @@
                 </div>
             </div>
         </div>
-
+       
         <!-- Comments: about us / contact us page -->
-        <div id="contact" class="column-layout" style="display:none;">
+        <div id="contact" class="column-layout">
             <h2>Contact Us</h2>
             <p>You can find all of our social media and contact links here!</p>
         </div>
     </div>
-
+   
     <!-- Footer image that stays at the bottom -->
     <div class="scrolling-footer">
-    <img src="images/aslfooter.png" alt="ASL Finger Spelled Footer Image" class="footer-image">
+        <img src="images/aslfooter.png" alt="ASL Finger Spelled Footer Image" class="footer-image">
     </div>
 
     <script>
@@ -86,18 +80,16 @@
         links.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1); // Get the target id
-                contentDivs.forEach(div => {
-                    div.style.display = 'none'; // Hide all content divs
-                });
-                document.getElementById(targetId).style.display = 'block'; // Show the selected div
+                const targetId = this.getAttribute('href').substring(1);
+                contentDivs.forEach(div => div.style.display = 'none');
+                document.getElementById(targetId).style.display = 'block';
             });
         });
-
-    // Load section based on URL hash or set a default section
-    const defaultSectionId = window.location.hash ? window.location.hash.substring(1) : 'home';
-    contentDivs.forEach(div => div.style.display = 'none');  // Hide all sections initially
-    document.getElementById(defaultSectionId).style.display = 'block';
+  
+        // Load section based on URL hash or set a default section
+        const defaultSectionId = window.location.hash ? window.location.hash.substring(1) : 'home';
+        contentDivs.forEach(div => div.style.display = 'none');
+        document.getElementById(defaultSectionId).style.display = 'block';
     </script>
 </body>
 </html>
