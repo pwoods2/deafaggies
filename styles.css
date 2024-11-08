@@ -10,18 +10,32 @@ body {
     overflow: hidden; /* Prevents body from scrolling, only content will scroll */
 }
 
-/* Scrolling Header */
+/* Scrolling Header with smaller size */
 .scrolling-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(80, 0, 0, 0.8);
-    color: white;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 5px 10px;
+    justify-content: space-between;
+    padding: 10px 20px; /* Adjust padding for a smaller header */
+    background-color: #500000;
+    color: white;
+    position: fixed;
+    width: 100%;
     z-index: 1000;
+}
+
+.header-logo img {
+    height: 40px; /* Set smaller logo size */
+    max-width: auto;
+}
+
+nav a {
+    font-size: 0.9em; /* Adjust font size for smaller links */
+    padding: 6px 12px; /* Reduce padding */
+}
+
+.dropdown .dropbtn {
+    font-size: 0.9em; /* Adjust dropdown button font size */
+    padding: 6px 12px;
 }
 
 /* Scrolling Footer */
