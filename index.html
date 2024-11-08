@@ -8,54 +8,53 @@
 </head>
 <body>
 
+    <!-- Scrolling Header with Centered Logo and Adjusted Nav Groups -->
     <div class="scrolling-header">
-    <!-- Left navigation group -->
-    <div class="nav-left">
-        <div class="dropdown">
-            <button class="dropbtn">Home</button>
-            <div class="dropdown-content">
-                <a href="#whatisdeaf">What is DeAF?</a>
+        <!-- Left navigation group -->
+        <div class="nav-left">
+            <div class="dropdown">
+                <button class="dropbtn">Home</button>
+                <div class="dropdown-content">
+                    <a href="#whatisdeaf">What is DeAF?</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="dropbtn">About</button>
+                <div class="dropdown-content">
+                    <a href="#officers">Officers</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#socialmedia">Social Media</a>
+                </div>
             </div>
         </div>
-    </div>
-        <div class="dropdown">
-            <button class="dropbtn">About</button>
-            <div class="dropdown-content">
-                <a href="#officers">Officers</a>
-                <a href="#faq">FAQ</a>
-                <a href="#socialmedia">Social Media</a>
+
+        <!-- Logo centered in the header -->
+        <div class="header-logo">
+            <img src="images/welcome.png" alt="DeAF Logo">
+        </div>
+
+        <!-- Right navigation group -->
+        <div class="nav-right">
+            <div class="dropdown">
+                <button class="dropbtn">Meetings</button>
+                <div class="dropdown-content">
+                    <a href="#meetingslides">Meeting Slides</a>
+                    <a href="#meetinginfo">Meeting Information</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Events</button>
+                <div class="dropdown-content">
+                    <a href="#calendar">Calendar</a>
+                    <a href="#gallery">Gallery</a>
+                </div>
             </div>
         </div>
-        
-     <!--    <a href="#home">Home</a>    
-        
-    <!-- Logo centered in the header -->
-    <div class="header-logo">
-        <img src="images/welcome.png" alt="DeAF Logo">
     </div>
 
-    <!-- Right navigation group -->
-    <div class="nav-right">
-        <div class="dropdown">
-            <button class="dropbtn">Meetings</button>
-            <div class="dropdown-content">
-                <a href="#meetingslides">Meeting Slides</a>
-                <a href="#meetinginfo">Meeting Information</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Events</button>
-            <div class="dropdown-content">
-                <a href="#calendar">Calendar</a>
-                <a href="#gallery">Gallery</a>
-            </div>
-        </div>
-    </div>            
-    </div>
-
-    
+    <!-- Main Content Section -->
     <div id="content">
-
         <!-- Home page -->
         <div id="home" class="content-section">
             <h2>Welcome to the official website for DeAF!</h2>
@@ -63,51 +62,13 @@
                 <div class="item">
                     <p>We are so happy you're here! You can find information about us, ways to contact us, and meeting information and slides here.</p>
                     <img src="images/iloveyousign.png" alt="I Love You Hand Sign" class="image">
-                <div> 
-                    <p> The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues.
-The 20 meter pacer test will begin in 30 seconds. Line up at the start.
-The running speed starts slowly, but gets faster each minute after you hear this signal.
-A single lap should be completed each time you hear this sound.
-Remember to run in a straight line, and run as long as possible.
-The second time you fail to complete a lap before the sound, your test is over.
-The test will begin on the word start.
-On your mark, get ready, start.
-                    </p>
-                </div>
-                     <div> 
-                    <p> The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues.
-The 20 meter pacer test will begin in 30 seconds. Line up at the start.
-The running speed starts slowly, but gets faster each minute after you hear this signal.
-A single lap should be completed each time you hear this sound.
-Remember to run in a straight line, and run as long as possible.
-The second time you fail to complete a lap before the sound, your test is over.
-The test will begin on the word start.
-On your mark, get ready, start.
-                    </p>
-                </div>
-                     <div> 
-                    <p> The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues.
-The 20 meter pacer test will begin in 30 seconds. Line up at the start.
-The running speed starts slowly, but gets faster each minute after you hear this signal.
-A single lap should be completed each time you hear this sound.
-Remember to run in a straight line, and run as long as possible.
-The second time you fail to complete a lap before the sound, your test is over.
-The test will begin on the word start.
-On your mark, get ready, start.
-                    </p>
-                </div>
-                     <div> 
-                    <p> The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues.
-The 20 meter pacer test will begin in 30 seconds. Line up at the start.
-The running speed starts slowly, but gets faster each minute after you hear this signal.
-A single lap should be completed each time you hear this sound.
-Remember to run in a straight line, and run as long as possible.
-The second time you fail to complete a lap before the sound, your test is over.
-The test will begin on the word start.
-On your mark, get ready, start.
-                    </p>
-                </div>
-                </div>
+                </div> 
+            </div>
+            <!-- Long Text Sections -->
+            <div> 
+                <p> The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues...
+                <!-- Repeat as needed -->
+                </p>
             </div>
         </div>
 
@@ -129,7 +90,7 @@ On your mark, get ready, start.
 
         <div id="socialmedia" class="content-section">
             <h2>Social Media Links</h2>
-            <p>Click here for our instagram!</p>
+            <p>Click here for our Instagram!</p>
         </div>
 
         <!-- Meetings page -->
@@ -162,8 +123,8 @@ On your mark, get ready, start.
 
     <script>
         // JavaScript to handle navigation
-        const links = document.querySelectorAll('nav a');
-        const contentDivs = document.querySelectorAll('#content > div');
+        const links = document.querySelectorAll('.dropdown-content a');
+        const contentDivs = document.querySelectorAll('#content > .content-section');
 
         links.forEach(link => {
             link.addEventListener('click', function(e) {
@@ -173,7 +134,7 @@ On your mark, get ready, start.
                 document.getElementById(targetId).style.display = 'block';
             });
         });
-  
+
         // Load section based on URL hash or set a default section
         const defaultSectionId = window.location.hash ? window.location.hash.substring(1) : 'home';
         contentDivs.forEach(div => div.style.display = 'none');
@@ -181,4 +142,3 @@ On your mark, get ready, start.
     </script>
 </body>
 </html>
-
