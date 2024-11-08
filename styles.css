@@ -107,7 +107,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
 }
 
 .footer-image {
