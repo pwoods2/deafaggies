@@ -1,4 +1,4 @@
-/* styles.css */
+/* General body styling */
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -24,27 +24,28 @@ body::after {
     background-position: center;
     background-attachment: fixed;
     transform: scaleX(-1); /* Horizontal flip */
-    opacity: 0.5; /* Optional: adjust opacity for a subtle effect */
+    opacity: 0.5;
     z-index: -1;
 }
 
-/*
+/* Banner styling */
 .banner {
     background-color: rgba(80, 0, 0, 0.8);
     color: white;
     text-align: center;
     padding: 20px;
-    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-*/
+
+/* Header styles */
 h1, h2 {
     text-align: center;
     color: #500000;
 }
 
+/* Navigation styling */
 nav {
     text-align: center;
     margin-bottom: 20px;
@@ -64,29 +65,34 @@ nav a:hover {
     background-color: #750000;
 }
 
+/* Column layout styling */
 .column-layout {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;                /* Enable wrapping for smaller screens */
+    justify-content: center;         /* Center the columns */
+    align-items: center;
     margin: 20px 0;
     color: #333;
 }
 
 .column-layout > div {
     width: 45%;
-    margin: 0 20px;
+    margin: 0 10px;
     text-align: center;
 }
 
+/* Container for items */
 .container {
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Item layout */
 .item {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;                /* Allows text and images to stack on smaller screens */
 }
 
 .item img {
@@ -100,6 +106,7 @@ nav a:hover {
     color: #333;
 }
 
+/* Fixed footer styling */
 .scrolling-footer {
     position: fixed;
     bottom: 0;
@@ -107,7 +114,6 @@ nav a:hover {
     display: flex;
     justify-content: center;
     z-index: 1000;
-    /* background: rgba(0, 0, 0, 0.5); */
 }
 
 .footer-image {
@@ -116,6 +122,7 @@ nav a:hover {
     padding: 10px;
 }
 
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .banner {
         padding: 10px;
@@ -129,19 +136,22 @@ nav a:hover {
 
     .column-layout {
         flex-direction: column;
+        align-items: center;       /* Center columns when stacked vertically */
     }
 
     .column-layout > div {
-        width: 100%;
+        width: 100%;               /* Full width on smaller screens */
         margin: 10px 0;
     }
 
     .item img {
         max-width: 100%;
-        margin: 0;
+        margin: 0;                 /* Remove side margin for full-width look */
+    }
+
+    .item {
+        flex-direction: column;    /* Stack text and image vertically */
+        text-align: center;        /* Center-align text for a cleaner look */
     }
 }
 
-
-
-/* Comments */
