@@ -5,27 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeAF Website</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Comments: linking to the CSS file -->
 </head>
 <body>
-    <!-- Header with logo and navigation buttons -->
-    <header class="scrolling-header">
+    <!-- Scrolling Header with dropdown menu -->
+    <div class="scrolling-header">
+        <div class="header-logo">
+            <!-- Insert your logo here -->
+            <img src="images/logo.png" alt="DeAF Logo">
+        </div>
+
         <nav>
             <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#events">Events</a>
-            <a href="#meetings">Meetings</a>
-        </nav>
-        <img src="images/logo.png" alt="DeAF Logo" class="header-logo">
-    </header>
 
-    <!-- Content sections -->
+            <div class="dropdown">
+                <button class="dropbtn">About</button>
+                <div class="dropdown-content">
+                    <a href="#whatisdeaf">What is DeAF?</a>
+                    <a href="#officers">Officers</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#socialmedia">Social Media</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Meetings</button>
+                <div class="dropdown-content">
+                    <a href="#meetingslides">Meeting Slides</a>
+                    <a href="#meetinginfo">Meeting Information</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Events</button>
+                <div class="dropdown-content">
+                    <a href="#calendar">Calendar</a>
+                    <a href="#gallery">Gallery</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
     <div id="content">
 
         <!-- Home page -->
-        <div id="home">
+        <div id="home" class="content-section">
             <h2>Welcome to the official website for DeAF!</h2>
-            <!-- Alternating text and image section -->
             <div class="container">
                 <div class="item">
                     <p>We are so happy you're here! You can find information about us, ways to contact us, and meeting information and slides here.</p>
@@ -33,86 +57,61 @@
                 </div>
             </div>
         </div>
-        
-        <!-- About page with subpages -->
-        <div id="about">
-            <h2>About DeAF</h2>
-            <!-- Subpage links for About -->
-            <nav>
-                <a href="#what-is-deaf">What is DeAF?</a>
-                <a href="#officers">Officers</a>
-                <a href="#faq">FAQ</a>
-                <a href="#social-media">Social Media</a>
-            </nav>
 
-            <div id="what-is-deaf">
-                <h3>What is DeAF?</h3>
-                <p>DeAF is an organization focused on raising awareness and providing support for individuals who are deaf or hard of hearing.</p>
-            </div>
-            <div id="officers">
-                <h3>Officers</h3>
-                <p>Meet our team of dedicated officers who work to keep DeAF running smoothly.</p>
-            </div>
-            <div id="faq">
-                <h3>FAQ</h3>
-                <p>Find answers to commonly asked questions about DeAF.</p>
-            </div>
-            <div id="social-media">
-                <h3>Social Media</h3>
-                <p>Follow us on our social media channels to stay updated.</p>
-            </div>
-        </div>
-        
-        <!-- Meetings page with subpages -->
-        <div id="meetings">
-            <h2>Meetings</h2>
-            <!-- Subpage links for Meetings -->
-            <nav>
-                <a href="#meeting-slides">Meeting Slides</a>
-                <a href="#meeting-info">Meeting Information</a>
-            </nav>
-
-            <div id="meeting-slides">
-                <h3>Meeting Slides</h3>
-                <p>All meeting slides will be posted here for your reference.</p>
-            </div>
-            <div id="meeting-info">
-                <h3>Meeting Information</h3>
-                <p>Details about upcoming meetings, including agendas and topics.</p>
-            </div>
+        <!-- About Us (What is DeAF?, Officers, FAQ, Social Media) -->
+        <div id="whatisdeaf" class="content-section">
+            <h2>What is DeAF?</h2>
+            <p>Information about what DeAF is...</p>
         </div>
 
-        <!-- Events page with subpages -->
-        <div id="events">
-            <h2>Events</h2>
-            <!-- Subpage links for Events -->
-            <nav>
-                <a href="#calendar">Calendar</a>
-                <a href="#gallery">Gallery</a>
-            </nav>
-
-            <div id="calendar">
-                <h3>Upcoming Events Calendar</h3>
-                <p>Stay up-to-date with our upcoming events!</p>
-            </div>
-            <div id="gallery">
-                <h3>Event Gallery</h3>
-                <p>View photos from past events and gatherings.</p>
-            </div>
-        </div>
-        
-        <!-- Footer image that stays at the bottom -->
-        <div class="scrolling-footer">
-            <img src="images/aslfooter.png" alt="ASL Finger Spelled Footer Image" class="footer-image">
+        <div id="officers" class="content-section">
+            <h2>Meet the Officers</h2>
+            <p>Details about the officers...</p>
         </div>
 
+        <div id="faq" class="content-section">
+            <h2>FAQ</h2>
+            <p>Frequently asked questions...</p>
+        </div>
+
+        <div id="socialmedia" class="content-section">
+            <h2>Social Media Links</h2>
+            <p>Click here for our instagram!</p>
+        </div>
+
+        <!-- Meetings page -->
+        <div id="meetingslides" class="content-section">
+            <h2>Meeting Slides</h2>
+            <p>All slides will be posted here...</p>
+        </div>
+
+        <div id="meetinginfo" class="content-section">
+            <h2>Meeting Information</h2>
+            <p>Meeting information...</p>
+        </div>
+
+        <!-- Events page -->
+        <div id="calendar" class="content-section">
+            <h2>Calendar</h2>
+            <p>Upcoming events will be listed here...</p>
+        </div>
+
+        <div id="gallery" class="content-section">
+            <h2>Gallery</h2>
+            <p>Images from past events will be displayed here...</p>
+        </div>
+    </div>
+
+    <!-- Scrolling Footer -->
+    <div class="scrolling-footer">
+        <img src="images/aslfooter.png" alt="ASL Finger Spelled Footer Image" class="footer-image">
     </div>
 
     <script>
-        // JavaScript to handle navigation and subpages
+        // JavaScript to handle navigation
         const links = document.querySelectorAll('nav a');
         const contentDivs = document.querySelectorAll('#content > div');
-        
+
         links.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -129,3 +128,4 @@
     </script>
 </body>
 </html>
+
