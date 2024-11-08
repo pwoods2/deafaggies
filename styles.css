@@ -23,19 +23,70 @@ body {
     z-index: 1000;
 }
 
+/* Flex containers for nav groups */
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust spacing between navigation items */
+}
+
+/* Style for logo centered in the header */
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
 .header-logo img {
     height: 40px; /* Set smaller logo size */
     max-width: auto;
 }
 
+/* Navigation link styles */
 nav a {
     font-size: 0.9em; /* Adjust font size for smaller links */
     padding: 6px 12px; /* Reduce padding */
+    color: white;
+    text-decoration: none;
 }
 
-.dropdown .dropbtn {
+/* Dropdown menu styling */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #500000;
+    color: white;
     font-size: 0.9em; /* Adjust dropdown button font size */
     padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #750000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #550000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Scrolling Footer */
@@ -72,42 +123,4 @@ nav a {
 /* Content section styling */
 .content-section {
     margin-bottom: 20px;
-}
-
-/* Dropdown menu styling */
-nav {
-    display: flex;
-    gap: 20px;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background-color: #500000;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #750000;
-    min-width: 160px;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }
