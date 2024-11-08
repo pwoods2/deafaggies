@@ -2,18 +2,35 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
-    background-image: url('images/backgroundDeAF.png');  /* Path to your background image */
-    background-size: cover;         /* Ensures the image covers the entire background */
-    background-attachment: fixed;   /* Keeps the image fixed as the page scrolls */
-    background-position: center;    /* Centers the background image */
-    background-repeat: no-repeat;   /* Prevents tiling of the image */
-    color: #333;                    /* Default text color */
+    background-image: url('images/backgroundDeAF.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Additional styling for body content to ensure readability */
+/* Flipping background */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/backgroundDeAF.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transform: scaleX(-1); /* Horizontal flip */
+    opacity: 0.5; /* Optional: adjust opacity for a subtle effect */
+    z-index: -1;
+}
+
 /*
 .banner {
-    background-color: rgba(80, 0, 0, 0.8); /* Semi-transparent overlay for readability 
+    background-color: rgba(80, 0, 0, 0.8);
     color: white;
     text-align: center;
     padding: 20px;
@@ -23,17 +40,10 @@ body {
     justify-content: center;
 }
 */
-
-h1 {
+h1, h2 {
     text-align: center;
     color: #500000;
 }
-
-h2 {
-    text-align: center;
-    color: #333;
-}
-
 
 nav {
     text-align: center;
@@ -42,43 +52,29 @@ nav {
 
 nav a {
     margin: 0 15px;
-    padding: 10px 20px;          /* Add padding for button shape */
+    padding: 10px 20px;
     text-decoration: none;
-    color: white;                /* Text color for the button */
-    background-color: #500000;   /* Button background color */
-    border-radius: 20px;         /* Makes the button oval-shaped */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+    background-color: #500000;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #500000;   /* Darker color on hover */
-    /*  text-decoration: none;       /* Ensure text decoration is removed on hover */
+    background-color: #750000;
 }
 
-
 .column-layout {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center the columns */
-    margin: 20px 0; /* Margin between sections */
-    color: #333; /* Ensure text for paragraphs is dark */
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    color: #333;
 }
 
 .column-layout > div {
-    width: 45%; /* Set column width */
-    margin: 0 20px; /* Space between columns */
-    text-align: center; /* Center text in each column */
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    .column-layout {
-        flex-direction: column; /* Stack columns on smaller screens */
-    }
-
-    .column-layout > div {
-        width: 100%; /* Full width on smaller screens */
-        margin: 10px 0; /* Margin for stacked layout */
-    }
+    width: 45%;
+    margin: 0 20px;
+    text-align: center;
 }
 
 .container {
@@ -90,47 +86,36 @@ nav a:hover {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .item img {
-    max-width: 300px; /* Adjust as needed */
-    margin-left: 20px; /* Space between text and image */
+    max-width: 300px;
+    margin-left: 20px;
 }
 
 .item p {
-    flex: 1; /* Allow the paragraph to take up remaining space */
+    flex: 1;
     line-height: 1.6;
-    color: #333; /* Ensure paragraph text is dark */
+    color: #333;
 }
 
-/* Alternate layout */
-.item:nth-child(odd) {
-    flex-direction: row; /* Text on the left, image on the right */
-}
-
-.item:nth-child(even) {
-    flex-direction: row-reverse; /* Image on the left, text on the right */
-}
-
-
-/* Styles for the fixed footer image */
 .scrolling-footer {
     position: fixed;
-    bottom: 0;                      /* Stick to the bottom of the viewport */
-    width: 100%;                    /* Make the div as wide as the viewport */
+    bottom: 0;
+    width: 100%;
     display: flex;
-    justify-content: center;        /* Center the image horizontally */
-    z-index: 1000;                  /* Ensure it appears on top of other content */
-    /* background: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent background */
+    justify-content: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .footer-image {
-    max-width: 100px;               /* Set a max-width to control image size */
-    height: auto;                   /* Maintain aspect ratio */
-    padding: 10px;                  /* Add padding around the image */
+    max-width: 100px;
+    height: auto;
+    padding: 10px;
 }
 
-/* for phones and smaller screens*/
 @media (max-width: 768px) {
     .banner {
         padding: 10px;
@@ -142,11 +127,21 @@ nav a:hover {
         font-size: 0.9em;
     }
 
+    .column-layout {
+        flex-direction: column;
+    }
+
+    .column-layout > div {
+        width: 100%;
+        margin: 10px 0;
+    }
+
     .item img {
-        max-width: 100%;   /* Image resizes to fit smaller screens */
-        margin: 0;         /* Remove margin for a full-width look */
+        max-width: 100%;
+        margin: 0;
     }
 }
+
 
 
 /* Comments */
