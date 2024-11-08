@@ -1,95 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DeAF Website</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Comments: linking to the CSS file -->
+    <!-- Linking styles from the reference file -->
+    <link rel="stylesheet" href="https://bigevent.tamu.edu/wp-content/uploads/fusion-styles/24737b069d236d26c20f2636022c7b7a.min.css">
 </head>
-<body>
-    <div class="banner">
-        <h1>Howdy!</h1>
-    </div>
+<body class="avada-body">
 
-    <br>
-   
-    <!-- Comments: creating the navigation section -->    
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#contact">Contact Us</a>
-        <a href="#events">Events and Upcoming</a>
-        <a href="#meetings">Meetings and Meeting Notes</a>
-    </nav>
-    
-    <!-- Comments: creating content for each page -->
-    <div id="content">
+<div id="boxed-wrapper">
+    <div id="wrapper" class="fusion-wrapper">
 
-        <!-- Comments: home page -->
-        <div id="home">
-            <h2>Welcome to the official website for DeAF!</h2>
-            <!-- Alternating text and image section -->
-            <div class="container">
-                <div class="item">
-                    <p>We are so happy you're here! You can find information about us, ways to contact us, and meeting information and slides here.</p>
-                    <img src="images/iloveyousign.png" alt="I Love You Hand Sign" class="image">
+        <!-- Header Section -->
+        <header class="fusion-header-wrapper">
+            <div class="fusion-header-v7 fusion-logo-alignment fusion-logo-left">
+                <div class="fusion-row fusion-middle-logo-menu">
+                    <nav class="fusion-main-menu" aria-label="Main Menu">
+                        <ul id="menu-main-2" class="fusion-menu fusion-middle-logo-ul">
+                            <li><a href="#home" class="fusion-top-level-link">Home</a></li>
+                            <li class="fusion-dropdown-menu">
+                                <a href="#about" class="fusion-top-level-link">About</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#about" class="fusion-bar-highlight">What is DeAF?</a></li>
+                                    <li><a href="#team" class="fusion-bar-highlight">Our Team</a></li>
+                                    <li><a href="#gallery" class="fusion-bar-highlight">Gallery</a></li>
+                                </ul>
+                            </li>
+                            <li class="fusion-dropdown-menu">
+                                <a href="#students" class="fusion-top-level-link">For Students</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#faqs" class="fusion-bar-highlight">FAQs</a></li>
+                                    <li><a href="#join-staff" class="fusion-bar-highlight">Join Our Staff</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#contact" class="fusion-top-level-link">Contact</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </div>
-        
-        <!-- Comments: meetings page -->
-        <div id="meetings">
-            <h2>All slides and meeting notes will be posted here!</h2>
-            <div class="container">
-                <div class="item">
-                    <p>This is the first text paragraph. It provides information about the first image next to it.</p>
-                    <img src="image1.jpg" alt="Description of Image 1" class="image">
+        </header>
+
+        <!-- Content Sections -->
+        <main id="main" class="clearfix width-100">
+            <div class="fusion-row" style="max-width:100%;">
+
+                <!-- Home Section -->
+                <section id="home" class="full-width">
+                    <div class="fusion-fullwidth fullwidth-box" style="background-color:rgba(255,255,255,0.85);">
+                        <h2>Welcome to the official website for DeAF!</h2>
+                        <p>We are so happy you're here! Find information about us, contact details, and meeting slides.</p>
+                        <img src="images/iloveyousign.png" alt="I Love You Hand Sign" class="image">
+                    </div>
+                </section>
+
+                <!-- Meetings Section -->
+                <section id="meetings" class="full-width">
+                    <div class="fusion-fullwidth fullwidth-box" style="background-color:rgba(245,245,245,0.85);">
+                        <h2>Meeting Notes and Slides</h2>
+                        <p>All slides and meeting notes will be posted here!</p>
+                        <img src="image1.jpg" alt="Meeting Notes Image" class="image">
+                    </div>
+                </section>
+
+                <!-- Events Section -->
+                <section id="events" class="full-width">
+                    <div class="fusion-fullwidth fullwidth-box" style="background-color:rgba(235,235,235,0.85);">
+                        <h2>Upcoming Events</h2>
+                        <p>Our next event is Friendsgiving, November 19th, 4-8 PM at Aggie Park!</p>
+                        <img src="image2.jpg" alt="Friendsgiving Event" class="image">
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact" class="full-width">
+                    <div class="fusion-fullwidth fullwidth-box" style="background-color:rgba(225,225,225,0.85);">
+                        <h2>Contact Us</h2>
+                        <p>Follow us on social media or visit our Linktree for more information!</p>
+                        <img src="image3.jpg" alt="Social Media Links" class="image">
+                    </div>
+                </section>
+
+            </div> <!-- End fusion-row -->
+        </main> <!-- End #main -->
+
+        <!-- Footer Section -->
+        <footer class="fusion-footer">
+            <div class="fusion-row">
+                <div class="fusion-columns fusion-columns-4 fusion-widget-area">
+                    <div class="fusion-column">
+                        <h4>ABOUT DeAF</h4>
+                        <ul>
+                            <li><a href="#about">What is DeAF?</a></li>
+                            <li><a href="#team">Our Team</a></li>
+                            <li><a href="#gallery">Photo Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="fusion-column">
+                        <h4>FOR STUDENTS</h4>
+                        <ul>
+                            <li><a href="#join-staff">Join Our Staff</a></li>
+                        </ul>
+                    </div>
+                    <div class="fusion-column">
+                        <h4>FOR RESIDENTS</h4>
+                        <ul>
+                            <li><a href="#resident-info">Request A Job</a></li>
+                        </ul>
+                    </div>
+                    <div class="fusion-column fusion-column-last">
+                        <h4>FOR SCHOOLS</h4>
+                        <ul>
+                            <li><a href="#conference">Big Event Conference</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Comments: events page -->
-        <div id="events">
-            <h2>Here is all the information regarding upcoming events!</h2>
-            <!-- Alternating text and image section -->
-            <div class="container">
-                <div class="item">
-                    <p>This is the first text paragraph. It provides information about the first image next to it.</p>
-                    <img src="image1.jpg" alt="Description of Image 1" class="image">
+
+            <div class="fusion-copyright">
+                <p>&copy; Copyright 2024 | DeAF Organization</p>
+                <div class="fusion-social-links-footer">
+                    <a href="https://facebook.com" class="fusion-facebook">Facebook</a>
+                    <a href="https://twitter.com" class="fusion-twitter">Twitter</a>
+                    <a href="https://instagram.com" class="fusion-instagram">Instagram</a>
                 </div>
             </div>
-        </div>
-       
-        <!-- Comments: about us / contact us page -->
-        <div id="contact" class="column-layout">
-            <h2>Contact Us</h2>
-            <p>You can find all of our social media and contact links here!</p>
-        </div>
-    </div>
-   
-    <!-- Footer image that stays at the bottom -->
-    <div class="scrolling-footer">
-        <img src="images/aslfooter.png" alt="ASL Finger Spelled Footer Image" class="footer-image">
-    </div>
+        </footer>
 
-    <script>
-        // JavaScript to handle navigation
-        const links = document.querySelectorAll('nav a');
-        const contentDivs = document.querySelectorAll('#content > div');
+    </div> <!-- End wrapper -->
+</div> <!-- End boxed-wrapper -->
 
-        links.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                contentDivs.forEach(div => div.style.display = 'none');
-                document.getElementById(targetId).style.display = 'block';
-            });
-        });
-  
-        // Load section based on URL hash or set a default section
-        const defaultSectionId = window.location.hash ? window.location.hash.substring(1) : 'home';
-        contentDivs.forEach(div => div.style.display = 'none');
-        document.getElementById(defaultSectionId).style.display = 'block';
-    </script>
+<script src="scripts.js"></script>
 </body>
 </html>
+
