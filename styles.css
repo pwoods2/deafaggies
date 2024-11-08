@@ -11,8 +11,9 @@ body {
 }
 
 /* Additional styling for body content to ensure readability */
+/*
 .banner {
-    background-color: rgba(80, 0, 0, 0.8); /* Semi-transparent overlay for readability */
+    background-color: rgba(80, 0, 0, 0.8); /* Semi-transparent overlay for readability 
     color: white;
     text-align: center;
     padding: 20px;
@@ -21,7 +22,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+*/
 
 h1 {
     text-align: center;
