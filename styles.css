@@ -67,6 +67,47 @@ nav a, .dropbtn {
     white-space: nowrap; /* Prevents text from wrapping on narrow screens */
 }
 
+/* Styling for the Officers Section */
+#officers {
+    text-align: center;
+    padding: 20px;
+}
+
+.officers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.officer-item {
+    width: 150px; /* Width for each item */
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.officer-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    margin-top: 10px;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 600px) {
+    .officers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .officer-item {
+        width: 80%; /* Make items wider on smaller screens */
+    }
+}
+
 /* Responsive Navigation Adjustments */
 @media (max-width: 768px) {
     .nav-left, .nav-right {
