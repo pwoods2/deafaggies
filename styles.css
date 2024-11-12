@@ -215,6 +215,28 @@ nav a, .dropbtn {
     background-color: #750000;
 }
 
+/* Large container for the calendar */
+.calendar-container {
+    margin: 20px; /* 20px margins around the box */
+    max-width: calc(100% - 40px); /* Ensures full width with margin adjustment */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a slight 3D effect */
+    border-radius: 8px; /* Optional rounded corners */
+    overflow: hidden;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* Styling for the calendar image */
+.calendar-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image scales without stretching */
+    display: block;
+}
+
 /* Footer Styling */
 .scrolling-footer {
     position: fixed;
