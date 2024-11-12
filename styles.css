@@ -43,42 +43,37 @@ nav a, .dropbtn {
 
 /* Officer Section Styling */
 #officers {
-    text-align: center;
+    text-align: left;
     padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .officers-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
 }
 
 .officer-item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 600px;
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    gap: 15px;
+}
+
+.officer-text {
+    flex-grow: 1;
+    margin-right: 10px;
 }
 
 .officer-image {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-}
-
-.officer-text {
-    text-align: left;
-    flex-grow: 1;
-}
-
-.officer-text p {
-    margin: 5px 0;
 }
 
 /* Responsive Adjustments */
