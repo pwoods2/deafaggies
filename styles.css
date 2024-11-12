@@ -15,7 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-   /* padding: 0px 10%; /* Small padding for flexibility */
+    padding: 0px 50%; /* Small padding for flexibility */
     background-color: #626262;
     color: white;
     position: fixed;
@@ -37,7 +37,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-   /* flex-grow: 1; removing this to check it out */ 
+    flex-grow: 1;
 }
 
 .header-logo img {
@@ -115,6 +115,47 @@ nav a, .dropbtn {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* Container for all officers */
+.officer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between each officer */
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Each officer card */
+.officer {
+    width: 250px; /* Sets width for each officer block */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+/* Officer photo styling */
+.officer-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Makes the image circular if it's square */
+    margin-bottom: 10px;
+}
+
+/* Styling for officer information */
+.officer p {
+    margin: 5px 0;
+}
+
+.officer p strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
 }
 
 /* Footer Styling */
