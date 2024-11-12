@@ -82,7 +82,7 @@ nav a, .dropbtn {
 
 .officer-item {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Ensures alignment of image and text */
     align-items: center;
     width: 100%;
     max-width: 600px; /* Optional: limit width for consistency */
@@ -90,6 +90,7 @@ nav a, .dropbtn {
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 15px; /* Space between image and text */
 }
 
 .officer-image {
@@ -101,6 +102,7 @@ nav a, .dropbtn {
 
 .officer-text {
     text-align: left; /* Aligns text to the left next to the image */
+    flex-grow: 1; /* Ensures text section takes up remaining space */
 }
 
 .officer-text p {
@@ -128,6 +130,17 @@ nav a, .dropbtn {
     }
 }
 
+/* Other media query for larger screens (e.g., max-width 768px) */
+@media (max-width: 768px) {
+    .officer-item {
+        flex-direction: column; /* Stack the image and text vertically on smaller screens */
+        align-items: center;
+    }
+
+    .officer-image {
+        margin-bottom: 10px; /* Space between the image and text when stacked */
+    }
+}
 
 /* Responsive adjustment for smaller screens */
 @media (max-width: 600px) {
