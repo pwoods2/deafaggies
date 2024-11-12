@@ -1,103 +1,126 @@
-/* General Body Styling */
+/* General body styling */
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
-    background: url('images/backgroundDeAF.png') center/cover fixed;
+    background-image: url('images/backgroundDeAF.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     color: #333;
-    overflow: hidden;
+    overflow: hidden; /* Prevents body from scrolling, only content will scroll */
 }
 
-/* Header Styling */
+/* Scrolling Header with smaller size */
 .scrolling-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0px 0px; /* Adjust padding for a smaller header */
     background-color: #626262;
     color: white;
     position: fixed;
     width: 100%;
     z-index: 1000;
-    box-sizing: border-box;
 }
 
-.header-logo img {
-    height: 40px;
-    max-width: 100%;
-}
-
-/* Navigation Styling */
+/* Flex containers for nav groups */
 .nav-left, .nav-right {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px; /* Adjust spacing between navigation items */
 }
 
-nav a, .dropbtn {
-    font-size: 0.9em;
-    padding: 6px 12px;
+/* Style for logo centered in the header */
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.header-logo img {
+    height: 40px; /* Set smaller logo size */
+    max-width: auto;
+}
+
+/* Navigation link styles */
+nav a {
+    font-size: 0.9em; /* Adjust font size for smaller links */
+    padding: 6px 12px; /* Reduce padding */
     color: white;
     text-decoration: none;
-    white-space: nowrap;
 }
 
-/* Officer Section Styling */
-#officers {
-    text-align: left;
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
+/* Dropdown menu styling */
+.dropdown {
+    position: relative;
 }
 
-.officers-container {
+.dropbtn {
+    background-color: #500000;
+    color: white;
+    font-size: 0.9em; /* Adjust dropdown button font size */
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #750000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #550000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Scrolling Footer */
+.scrolling-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(80, 0, 0, 0.8);
+    color: white;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.officer-item {
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    z-index: 1000;
 }
 
-.officer-text {
-    flex-grow: 1;
-    margin-right: 10px;
+/* Footer image styling */
+.footer-image {
+    max-width: 100px;
+    height: auto;
 }
 
-.officer-image img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+/* Content wrapper with scrollable area */
+#content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 70px; /* Offset for fixed header */
+    padding-bottom: 100px; /* Offset for fixed footer */
+    height: calc(100vh - 140px); /* Adjust for header and footer heights */
+    overflow-y: auto; /* Enables scrolling within the content area */
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .scrolling-header {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .header-logo img {
-        height: 30px;
-    }
-
-    .nav-left, .nav-right {
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .officers-container {
-        flex-direction: column;
-    }
-
-    .officer-image img {
-        width: 80px;
-        height: 80px;
-    }
+/* Content section styling */
+.content-section {
+    margin-bottom: 20px;
 }
