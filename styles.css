@@ -10,12 +10,12 @@ body {
     overflow: hidden; /* Prevents body from scrolling, only content will scroll */
 }
 
-/* Scrolling Header with smaller size */
+/* Scrolling Header with smaller side padding */
 .scrolling-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 200px; /* Adjust padding for a smaller header */
+    padding: 0px 20px; /* Reduced side padding for smaller spacing around logo */
     background-color: #626262;
     color: white;
     position: fixed;
