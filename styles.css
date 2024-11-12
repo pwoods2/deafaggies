@@ -125,7 +125,7 @@ nav a, .dropbtn {
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Each officer card */
@@ -134,7 +134,7 @@ nav a, .dropbtn {
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 15px;
+    padding: 10%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #f9f9f9;
 }
@@ -156,6 +156,63 @@ nav a, .dropbtn {
     display: block;
     font-weight: bold;
     margin-bottom: 4px;
+}
+
+/* Container for all meetings */
+.meeting-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Each meeting box */
+.meeting-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+/* Thumbnail for each meeting */
+.meeting-thumbnail {
+    width: 150px; /* Thumbnail width */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+/* Meeting details */
+.meeting-details {
+    flex: 1; /* Makes this section expand to fill available space */
+}
+
+.meeting-details h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.meeting-details p {
+    margin: 0 0 10px;
+}
+
+/* Download button styling */
+.download-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    color: white;
+    background-color: #500000;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.download-btn:hover {
+    background-color: #750000;
 }
 
 /* Footer Styling */
