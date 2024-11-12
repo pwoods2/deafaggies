@@ -170,27 +170,33 @@
         <img src="images/aslfooter.png" alt="ASL Finger Spelled Footer Image" class="footer-image">
     </div>
 
-       <!-- JavaScript -->
-    <script>
-        // Handle navigation clicks
-        const links = document.querySelectorAll('.dropdown-content a');
-        const contentSections = document.querySelectorAll('.content-section');
+<!-- JavaScript -->
+<script>
+    // Select all dropdown links and content sections
+    const links = document.querySelectorAll('.dropdown-content a');
+    const contentDivs = document.querySelectorAll('.content-section');
 
-        links.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                
-                // Hide all sections, then display the target section
-                contentSections.forEach(section => section.style.display = 'none');
-                document.getElementById(targetId).style.display = 'block';
-            });
+    // Function to display the correct section
+    function showSection(targetId) {
+        contentDivs.forEach(div => {
+            // Hide all sections except the targeted one
+            div.style.display = div.id === targetId ? 'block' : 'none';
         });
+    }
 
-        // Display section based on URL hash, or default to 'home'
-        const defaultSection = window.location.hash ? window.location.hash.substring(1) : 'home';
-        contentSections.forEach(section => section.style.display = 'none');
-        document.getElementById(defaultSection).style.display = 'block';
-    </script>
+    // Set up click event on each link
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1); // Get the ID from href
+            showSection(targetId); // Show the targeted section
+        });
+    });
+
+    // Load section based on URL hash or default to 'home'
+    const defaultSectionId = window.location.hash ? window.location.hash.substring(1) : 'home';
+    showSection(defaultSectionId); // Show either the hash target or 'home'
+</script>
+
 </body>
 </html>
