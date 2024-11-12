@@ -2,12 +2,9 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
-    background-image: url('images/backgroundDeAF.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background: url('images/backgroundDeAF.png') center/cover fixed;
     color: #333;
-    overflow: hidden; /* Prevents body from scrolling, only content will scroll */
+    overflow: hidden; /* Prevents body from scrolling */
 }
 
 /* Header Styling */
@@ -15,29 +12,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 10px; /* Small padding for flexibility */
+    padding: 0 10px;
     background-color: #626262;
     color: white;
     position: fixed;
     width: 100%;
     z-index: 1000;
-    box-sizing: border-box; /* Ensures padding does not cause overflow */
-}
-
-/* Responsive Header Adjustments */
-@media (max-width: 768px) {
-    .scrolling-header {
-        flex-direction: column;
-        padding: 10px;
-    }
-}
-
-/* Logo Styling */
-.header-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
+    box-sizing: border-box;
 }
 
 .header-logo img {
@@ -45,18 +26,11 @@ body {
     max-width: 100%;
 }
 
-/* Smaller Logo on Smaller Screens */
-@media (max-width: 768px) {
-    .header-logo img {
-        height: 30px; /* Reduces logo size for small screens */
-    }
-}
-
 /* Navigation Styling */
 .nav-left, .nav-right {
     display: flex;
     align-items: center;
-    gap: 15px; /* Adjust spacing between navigation items */
+    gap: 15px;
 }
 
 nav a, .dropbtn {
@@ -64,10 +38,10 @@ nav a, .dropbtn {
     padding: 6px 12px;
     color: white;
     text-decoration: none;
-    white-space: nowrap; /* Prevents text from wrapping on narrow screens */
+    white-space: nowrap;
 }
 
-/* Styling for the Officers Section */
+/* Officer Section Styling */
 #officers {
     text-align: center;
     padding: 20px;
@@ -75,94 +49,71 @@ nav a, .dropbtn {
 
 .officers-container {
     display: flex;
-    flex-direction: column; /* Keeps each officer as a separate row */
+    flex-direction: column;
     align-items: center;
-    gap: 20px; /* Adds space between officer items */
+    gap: 20px;
 }
 
 .officer-item {
     display: flex;
-    justify-content: flex-start; /* Ensures alignment of image and text */
     align-items: center;
     width: 100%;
-    max-width: 600px; /* Optional: limit width for consistency */
+    max-width: 600px;
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    gap: 15px; /* Space between image and text */
+    gap: 15px;
 }
 
 .officer-image {
-    width: 100px; /* Fixed size for all officer images */
+    width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-right: 15px; /* Adds space between image and text */
 }
 
 .officer-text {
-    text-align: left; /* Aligns text to the left next to the image */
-    flex-grow: 1; /* Ensures text section takes up remaining space */
+    text-align: left;
+    flex-grow: 1;
 }
 
 .officer-text p {
-    margin: 5px 0; /* Adds spacing between lines of text */
+    margin: 5px 0;
 }
 
-/* Responsive adjustment for smaller screens */
-@media (max-width: 600px) {
-    .officers-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .officer-item {
-        width: 80%; /* Make items wider on smaller screens */
-    }
-
-    .officer-image {
-        width: 80px; /* Resize the image on smaller screens */
-        height: 80px;
-    }
-
-    .officer-text {
-        text-align: center; /* Center text for better readability on smaller screens */
-    }
-}
-
-/* Other media query for larger screens (e.g., max-width 768px) */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .officer-item {
-        flex-direction: column; /* Stack the image and text vertically on smaller screens */
-        align-items: center;
-    }
-
-    .officer-image {
-        margin-bottom: 10px; /* Space between the image and text when stacked */
-    }
-}
-
-/* Responsive adjustment for smaller screens */
-@media (max-width: 600px) {
-    .officers-container {
+    .scrolling-header {
         flex-direction: column;
-        align-items: center;
+        padding: 10px;
     }
 
-    .officer-item {
-        width: 80%; /* Make items wider on smaller screens */
+    .header-logo img {
+        height: 30px;
     }
-}
 
-/* Responsive Navigation Adjustments */
-@media (max-width: 768px) {
     .nav-left, .nav-right {
         justify-content: center;
         gap: 10px;
     }
 
     .header-logo {
-        order: 1; /* Moves logo to a new line on small screens */
+        order: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .officer-item {
+        width: 80%;
+    }
+
+    .officer-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .officer-text {
+        text-align: center;
     }
 }
 
@@ -185,7 +136,7 @@ nav a, .dropbtn {
     position: absolute;
     background-color: #750000;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -223,18 +174,18 @@ nav a, .dropbtn {
     height: auto;
 }
 
-/* Content Wrapper with Scrollable Area */
+/* Content Wrapper */
 #content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    padding-top: 70px; /* Offset for fixed header */
-    padding-bottom: 100px; /* Offset for fixed footer */
-    height: calc(100vh - 140px); /* Adjust for header and footer heights */
-    overflow-y: auto; /* Enables scrolling within the content area */
+    padding-top: 70px;
+    padding-bottom: 100px;
+    height: calc(100vh - 140px);
+    overflow-y: auto;
 }
 
-/* Content Section Styling */
+/* Section Styling */
 .content-section {
     margin-bottom: 20px;
 }
