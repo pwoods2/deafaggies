@@ -4,7 +4,7 @@ body {
     margin: 0;
     background: url('images/backgroundDeAF.png') center/cover fixed;
     color: #333;
-    overflow: hidden; /* Prevents body from scrolling */
+    overflow: hidden;
 }
 
 /* Header Styling */
@@ -70,7 +70,7 @@ nav a, .dropbtn {
     margin-right: 10px;
 }
 
-.officer-image {
+.officer-image img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -92,95 +92,12 @@ nav a, .dropbtn {
         gap: 10px;
     }
 
-    .header-logo {
-        order: 1;
-    }
-}
-
-@media (max-width: 600px) {
-    .officer-item {
-        width: 80%;
+    .officers-container {
+        flex-direction: column;
     }
 
-    .officer-image {
+    .officer-image img {
         width: 80px;
         height: 80px;
     }
-
-    .officer-text {
-        text-align: center;
-    }
-}
-
-/* Dropdown Menu Styling */
-.dropdown {
-    position: relative;
-}
-
-.dropbtn {
-    background-color: #500000;
-    color: white;
-    font-size: 0.9em;
-    padding: 6px 12px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #750000;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #550000;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Footer Styling */
-.scrolling-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(80, 0, 0, 0.8);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    z-index: 1000;
-}
-
-.footer-image {
-    max-width: 100px;
-    height: auto;
-}
-
-/* Content Wrapper */
-#content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    padding-top: 70px;
-    padding-bottom: 100px;
-    height: calc(100vh - 140px);
-    overflow-y: auto;
-}
-
-/* Section Styling */
-.content-section {
-    margin-bottom: 20px;
 }
