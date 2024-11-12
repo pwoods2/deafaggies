@@ -53,6 +53,7 @@
             </div>
         </div>
     </div>
+
     <!-- Main Content Section -->
     <div id="content">
         <!-- Home page -->
@@ -64,73 +65,69 @@
                     <img src="images/DeAFLogoBW.png" alt="logo" class="image">
                 </div> 
             </div>
-            <!-- Long Text Sections -->
         </div>
-    </div>
 
         <!-- About Us (What is DeAF?, Officers, FAQ, Social Media) -->
         <div id="whatisdeaf" class="content-section">
             <h2>What is DeAF?</h2>
             <p>Howdy! We are an organization through Texas A&M that aims to promote the use of American Sign Language in the Bryan/College Station area and inform
-            people about Deaf culture and history. We accept all skill levels (including beginners!) and work to adapt our meetings to fit the communnity and 
+            people about Deaf culture and history. We accept all skill levels (including beginners!) and work to adapt our meetings to fit the community and 
             its needs. We have meetings to learn new signs and practice, as well as having socials to get to know each other and our community better.
             We hope to see you soon!
             </p>
         </div>
 
-<div id="officers">
-    <div class="officers-container">
-        <!-- Secretary -->
-        <div class="officer-item">
-            <div class="officer-image">
-                <img src="path/to/president.jpg" alt="President Image" />
-            </div>
-            <div class="officer-text">
-                <p><strong>Name:</strong> Jane Smith</p>
-                <p><strong>Title:</strong> President</p>
-                <p><strong>Biography:</strong> Jane enjoys...</p>
-            </div>
-        </div>
+        <!-- Officers Section -->
+        <div id="officers" class="content-section">
+            <h2>Officers</h2>
+            <div class="officers-container">
+                <div class="officer-item">
+                    <div class="officer-image">
+                        <img src="path/to/president.jpg" alt="President Image">
+                    </div>
+                    <div class="officer-text">
+                        <p><strong>Name:</strong> Jane Smith</p>
+                        <p><strong>Title:</strong> President</p>
+                        <p><strong>Biography:</strong> Jane enjoys...</p>
+                    </div>
+                </div>
 
-        <!-- Vice President (VP) -->
-        <div class="officer-item">
-            <div class="officer-image">
-                <img src="path/to/vp-image.jpg" alt="Vice President Image" />
-            </div>
-            <div class="officer-text">
-                <p><strong>Name:</strong> Phoebe Woods</p>
-                <p><strong>Title:</strong> Vice President</p>
-                <p><strong>Biography:</strong> Phoebe is...</p>
-            </div>
-        </div>
+                <div class="officer-item">
+                    <div class="officer-image">
+                        <img src="path/to/vp-image.jpg" alt="Vice President Image">
+                    </div>
+                    <div class="officer-text">
+                        <p><strong>Name:</strong> Phoebe Woods</p>
+                        <p><strong>Title:</strong> Vice President</p>
+                        <p><strong>Biography:</strong> Phoebe is...</p>
+                    </div>
+                </div>
 
-        <!-- President -->
-        <div class="officer-item">
-            <div class="officer-image">
-                <img src="images/secretary.png" alt="Secretary Image" />
-            </div>
-            <div class="officer-text">
-                <p><strong>Name:</strong> Brock Mast</p>
-                <p><strong>Title:</strong> Secretary</p>
-                <p><strong>Biography:</strong> Brock is a member of the class of 2028 majoring in Engineering, 
-                    and he enjoys riding motorcycles, rock climbing, and music!</p>
-            </div>
-        </div>
+                <div class="officer-item">
+                    <div class="officer-image">
+                        <img src="images/secretary.png" alt="Secretary Image">
+                    </div>
+                    <div class="officer-text">
+                        <p><strong>Name:</strong> Brock Mast</p>
+                        <p><strong>Title:</strong> Secretary</p>
+                        <p><strong>Biography:</strong> Brock is a member of the class of 2028 majoring in Engineering, 
+                        and he enjoys riding motorcycles, rock climbing, and music!</p>
+                    </div>
+                </div>
 
-        <!-- Treasurer -->
-        <div class="officer-item">
-            <div class="officer-image">
-                <img src="path/to/treasurer-image.jpg" alt="Treasurer Image" />
-            </div>
-            <div class="officer-text">
-                <p><strong>Name:</strong> Shannon Taylor</p>
-                <p><strong>Title:</strong> Treasurer</p>
-                <p><strong>Biography:</strong> Shannon is a member of the class of 2027 majoring in Biomedical Sciences, 
-                    and she enjoys baking, decorating, and Dress to Impress!</p>
+                <div class="officer-item">
+                    <div class="officer-image">
+                        <img src="path/to/treasurer-image.jpg" alt="Treasurer Image">
+                    </div>
+                    <div class="officer-text">
+                        <p><strong>Name:</strong> Shannon Taylor</p>
+                        <p><strong>Title:</strong> Treasurer</p>
+                        <p><strong>Biography:</strong> Shannon is a member of the class of 2027 majoring in Biomedical Sciences, 
+                        and she enjoys baking, decorating, and Dress to Impress!</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
         <div id="faq" class="content-section">
             <h2>FAQ</h2>
@@ -163,40 +160,16 @@
             <h2>Gallery</h2>
             <p>Images from past events will be displayed here...</p>
         </div>
-
+    </div>
 
     <!-- Scrolling Footer -->
     <div class="scrolling-footer">
         <img src="images/aslfooter.png" alt="ASL Finger Spelled Footer Image" class="footer-image">
     </div>
 
-<!-- JavaScript -->
-<script>
-    // Select all dropdown links and content sections
-    const links = document.querySelectorAll('.dropdown-content a');
-    const contentDivs = document.querySelectorAll('.content-section');
-
-    // Function to display the correct section
-    function showSection(targetId) {
-        contentDivs.forEach(div => {
-            // Hide all sections except the targeted one
-            div.style.display = div.id === targetId ? 'block' : 'none';
-        });
-    }
-
-    // Set up click event on each link
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1); // Get the ID from href
-            showSection(targetId); // Show the targeted section
-        });
-    });
-
-    // Load section based on URL hash or default to 'home'
-    const defaultSectionId = window.location.hash ? window.location.hash.substring(1) : 'home';
-    showSection(defaultSectionId); // Show either the hash target or 'home'
-</script>
+    <!-- JavaScript for Navigation -->
+    <script src="script.js"></script>
 
 </body>
 </html>
+
