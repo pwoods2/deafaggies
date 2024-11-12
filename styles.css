@@ -1,4 +1,4 @@
-/* General body styling */
+/* General Body Styling */
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -10,27 +10,29 @@ body {
     overflow: hidden; /* Prevents body from scrolling, only content will scroll */
 }
 
-/* Scrolling Header with smaller size */
+/* Header Styling */
 .scrolling-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 0px; /* Adjust padding for a smaller header */
+    padding: 0px 10px; /* Small padding for flexibility */
     background-color: #626262;
     color: white;
     position: fixed;
     width: 100%;
     z-index: 1000;
+    box-sizing: border-box; /* Ensures padding does not cause overflow */
 }
 
-/* Flex containers for nav groups */
-.nav-left, .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Adjust spacing between navigation items */
+/* Responsive Header Adjustments */
+@media (max-width: 768px) {
+    .scrolling-header {
+        flex-direction: column;
+        padding: 10px;
+    }
 }
 
-/* Style for logo centered in the header */
+/* Logo Styling */
 .header-logo {
     display: flex;
     align-items: center;
@@ -39,19 +41,45 @@ body {
 }
 
 .header-logo img {
-    height: 40px; /* Set smaller logo size */
-    max-width: auto;
+    height: 40px;
+    max-width: 100%;
 }
 
-/* Navigation link styles */
-nav a {
-    font-size: 0.9em; /* Adjust font size for smaller links */
-    padding: 6px 12px; /* Reduce padding */
+/* Smaller Logo on Smaller Screens */
+@media (max-width: 768px) {
+    .header-logo img {
+        height: 30px; /* Reduces logo size for small screens */
+    }
+}
+
+/* Navigation Styling */
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adjust spacing between navigation items */
+}
+
+nav a, .dropbtn {
+    font-size: 0.9em;
+    padding: 6px 12px;
     color: white;
     text-decoration: none;
+    white-space: nowrap; /* Prevents text from wrapping on narrow screens */
 }
 
-/* Dropdown menu styling */
+/* Responsive Navigation Adjustments */
+@media (max-width: 768px) {
+    .nav-left, .nav-right {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .header-logo {
+        order: 1; /* Moves logo to a new line on small screens */
+    }
+}
+
+/* Dropdown Menu Styling */
 .dropdown {
     position: relative;
 }
@@ -59,7 +87,7 @@ nav a {
 .dropbtn {
     background-color: #500000;
     color: white;
-    font-size: 0.9em; /* Adjust dropdown button font size */
+    font-size: 0.9em;
     padding: 6px 12px;
     border: none;
     cursor: pointer;
@@ -70,7 +98,7 @@ nav a {
     position: absolute;
     background-color: #750000;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -89,7 +117,7 @@ nav a {
     display: block;
 }
 
-/* Scrolling Footer */
+/* Footer Styling */
 .scrolling-footer {
     position: fixed;
     bottom: 0;
@@ -103,13 +131,12 @@ nav a {
     z-index: 1000;
 }
 
-/* Footer image styling */
 .footer-image {
     max-width: 100px;
     height: auto;
 }
 
-/* Content wrapper with scrollable area */
+/* Content Wrapper with Scrollable Area */
 #content {
     max-width: 1200px;
     margin: 0 auto;
@@ -120,7 +147,8 @@ nav a {
     overflow-y: auto; /* Enables scrolling within the content area */
 }
 
-/* Content section styling */
+/* Content Section Styling */
 .content-section {
     margin-bottom: 20px;
 }
+
