@@ -73,11 +73,14 @@ nav a, .dropbtn {
     padding: 20px;
 }
 
-.officers-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.officer-item {
+    width: 100%; /* Full width to center-align content */
+    max-width: 300px; /* Optional: limit width for consistency */
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .officer-item {
@@ -90,8 +93,8 @@ nav a, .dropbtn {
 }
 
 .officer-image {
-    width: 100%;
-    height: auto;
+    width: 100px; /* Sets consistent image size */
+    height: 100px;
     border-radius: 50%; /* Makes the image circular */
     margin-top: 10px;
 }
