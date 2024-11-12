@@ -170,24 +170,27 @@
         <img src="images/aslfooter.png" alt="ASL Finger Spelled Footer Image" class="footer-image">
     </div>
 
+       <!-- JavaScript -->
     <script>
-        // JavaScript to handle navigation
+        // Handle navigation clicks
         const links = document.querySelectorAll('.dropdown-content a');
-        const contentDivs = document.querySelectorAll('#content > .content-section');
+        const contentSections = document.querySelectorAll('.content-section');
 
         links.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
-                contentDivs.forEach(div => div.style.display = 'none');
+                
+                // Hide all sections, then display the target section
+                contentSections.forEach(section => section.style.display = 'none');
                 document.getElementById(targetId).style.display = 'block';
             });
         });
 
-        // Load section based on URL hash or set a default section
-        const defaultSectionId = window.location.hash ? window.location.hash.substring(1) : 'home';
-        contentDivs.forEach(div => div.style.display = 'none');
-        document.getElementById(defaultSectionId).style.display = 'block';
+        // Display section based on URL hash, or default to 'home'
+        const defaultSection = window.location.hash ? window.location.hash.substring(1) : 'home';
+        contentSections.forEach(section => section.style.display = 'none');
+        document.getElementById(defaultSection).style.display = 'block';
     </script>
 </body>
 </html>
