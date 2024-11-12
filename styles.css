@@ -121,7 +121,7 @@ nav a, .dropbtn {
 .officer-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Space between each officer */
+    gap: 5%; /* Space between each officer */
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
