@@ -15,7 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 0px; /* Adjust padding for a smaller header */
+    padding: 0px 200px; /* Adjust padding for a smaller header */
     background-color: #626262;
     color: white;
     position: fixed;
