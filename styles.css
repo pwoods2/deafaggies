@@ -37,7 +37,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
+   /* flex-grow: 1; removing this to check it out */ 
 }
 
 .header-logo img {
