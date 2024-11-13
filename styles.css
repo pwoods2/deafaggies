@@ -134,7 +134,7 @@ nav a, .dropbtn {
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 10%;
+    padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #f9f9f9;
 }
