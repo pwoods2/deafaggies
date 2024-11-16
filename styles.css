@@ -237,6 +237,39 @@ nav a, .dropbtn {
     display: block;
 }
 
+.button-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.social-button:hover {
+    background-color: #e6e6e6;
+    transform: scale(1.05);
+}
+
+.button-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
 /* Footer Styling */
 .scrolling-footer {
     position: fixed;
