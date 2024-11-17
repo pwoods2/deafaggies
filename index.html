@@ -193,15 +193,18 @@
             <h2>Calendar and Events</h2>
             <p>Upcoming events information can be found here, as well as our calendar!</p>
             
-            <div id="friendsgiving-item" class="content-section">
-                <p>Please write what you are bringing ONLY in the box!</p>
-                <h2>Friendsgiving Items:</h2>
-                <div class="friendsgiving-container">
-                <!-- Textbox for Friendsgiving item -->
-                <input type="text" id="friendsgiving-input" placeholder="Enter item..." oninput="updateItemList()" class="friendsgiving-input">
-                </div>
-                <ul id="item-list" class="item-list"></ul> <!-- List of entered items -->
-                </div>
+            <!-- Friendsgiving Item Section -->
+    <div id="friendsgiving-item" class="content-section">
+        <h2>Friendsgiving Items:</h2>
+        <div class="friendsgiving-container">
+            <!-- Textbox for Friendsgiving item -->
+            <input type="text" id="friendsgiving-input" placeholder="Enter item..." class="friendsgiving-input">
+            <!-- Submit button -->
+            <button onclick="submitItem()" class="submit-button">Submit</button>
+        </div>
+        <!-- List of entered items with counts -->
+        <ul id="item-list" class="item-list"></ul>
+    </div>
 
                 <div class="calendar-container">
                 <img src="images/novembercalendar.png" alt="Calendar" class="calendar-image">
@@ -219,27 +222,38 @@
         <img src="images/aslfooter.png" alt="ASL Finger Spelled Footer Image" class="footer-image">
     </div>
     
+ <!-- JavaScript to handle the item count logic -->
     <script>
-    // Object to store the counts of each Friendsgiving item
-    const itemCounts = {};
+        // Object to store the counts of each Friendsgiving item
+        const itemCounts = {};
 
-    function updateItemList() {
-        const inputField = document.getElementById('friendsgiving-input');
-        const itemList = document.getElementById('item-list');
-        const itemName = inputField.value.trim();  // Get the entered item, trimmed
+        // Function to handle item submission
+        function submitItem() {
+            const inputField = document.getElementById('friendsgiving-input');
+            const itemName = inputField.value.trim();  // Get the entered item, trimmed
 
-        // Clear the current list to update it every time
-        itemList.innerHTML = '';
+            if (itemName !== '') {
+                // Update the count for the entered item
+                if (itemCounts[itemName]) {
+                    itemCounts[itemName] += 1; // Increment if item exists
+                } else {
+                    itemCounts[itemName] = 1; // Otherwise, set count to 1
+                }
 
-        if (itemName !== '') {
-            // Update the count for the entered item
-            if (itemCounts[itemName]) {
-                itemCounts[itemName] += 1;
-            } else {
-                itemCounts[itemName] = 1;
+                // Clear the input field after submission
+                inputField.value = '';
+
+                // Update the list of items and their counts
+                updateItemList();
             }
+        }
 
-            // Display the item counts in a list
+        // Function to update the displayed list of items with counts
+        function updateItemList() {
+            const itemList = document.getElementById('item-list');
+            itemList.innerHTML = '';  // Clear the current list
+
+            // Loop through the itemCounts object and display the items and their counts
             for (let item in itemCounts) {
                 if (itemCounts.hasOwnProperty(item)) {
                     const listItem = document.createElement('li');
@@ -248,9 +262,7 @@
                 }
             }
         }
-    }
-</script>
-
+    </script>
 
     <script>
         // JavaScript to handle navigation
