@@ -190,8 +190,18 @@
 
         <!-- Events page -->
         <div id="calendar" class="content-section">
-            <h2>Calendar</h2>
+            <h2>Calendar and Events</h2>
             <p>Upcoming events information can be found here, as well as our calendar!</p>
+            
+            <div id="friendsgiving-item" class="content-section">
+                <h2>Friendsgiving Items:</h2>
+                <div class="friendsgiving-container">
+                <!-- Textbox for Friendsgiving item -->
+                <input type="text" id="friendsgiving-input" placeholder="Enter item..." oninput="updateItemList()" class="friendsgiving-input">
+                </div>
+                <ul id="item-list" class="item-list"></ul> <!-- List of entered items -->
+                </div>
+
                 <div class="calendar-container">
                 <img src="images/novembercalendar.png" alt="Calendar" class="calendar-image">
                 </div>
@@ -207,6 +217,39 @@
     <div class="scrolling-footer">
         <img src="images/aslfooter.png" alt="ASL Finger Spelled Footer Image" class="footer-image">
     </div>
+    
+    <script>
+    // Object to store the counts of each Friendsgiving item
+    const itemCounts = {};
+
+    function updateItemList() {
+        const inputField = document.getElementById('friendsgiving-input');
+        const itemList = document.getElementById('item-list');
+        const itemName = inputField.value.trim();  // Get the entered item, trimmed
+
+        // Clear the current list to update it every time
+        itemList.innerHTML = '';
+
+        if (itemName !== '') {
+            // Update the count for the entered item
+            if (itemCounts[itemName]) {
+                itemCounts[itemName] += 1;
+            } else {
+                itemCounts[itemName] = 1;
+            }
+
+            // Display the item counts in a list
+            for (let item in itemCounts) {
+                if (itemCounts.hasOwnProperty(item)) {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${item}: ${itemCounts[item]}`;
+                    itemList.appendChild(listItem);
+                }
+            }
+        }
+    }
+</script>
+
 
     <script>
         // JavaScript to handle navigation
