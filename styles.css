@@ -29,8 +29,15 @@ body {
     .scrolling-header {
         flex-direction: column;
         padding: 10px;
+        position: relative; /* Change from fixed to relative to avoid overlap with content */
+        z-index: 999; /* Ensures the header stays on top of other content without cutting it off */
+    }
+
+    #content {
+        padding-top: 120px; /* Increase top padding to make room for the header */
     }
 }
+
 
 /* Logo Styling */
 .header-logo {
