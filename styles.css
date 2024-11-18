@@ -340,3 +340,12 @@ nav a, .dropbtn {
     display: block;    /* Prevents unwanted space below the image */
     margin: 0 auto;    /* Centers the image horizontally */
 }
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+    .calendar-image {
+        max-width: 90%;  /* Reduces max-width for smaller screens */
+        height: auto;    /* Keeps aspect ratio */
+        margin: 0 auto;  /* Centers the image */
+    }
+}
