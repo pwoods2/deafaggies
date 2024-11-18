@@ -223,30 +223,53 @@
     </div>
     
  <!-- JavaScript to handle the item count logic -->
-    <script>
-        // Object to store the counts of each Friendsgiving item
-        const itemCounts = {};
+<script>
+    // Object to store the counts of each Friendsgiving item
+    let itemCounts = JSON.parse(localStorage.getItem('friendsgivingItems')) || {};
 
-        // Function to handle item submission
-        function submitItem() {
-            const inputField = document.getElementById('friendsgiving-input');
-            const itemName = inputField.value.trim();  // Get the entered item, trimmed
+    // Function to handle item submission
+    function submitItem() {
+        const inputField = document.getElementById('friendsgiving-input');
+        const itemName = inputField.value.trim();  // Get the entered item, trimmed
 
-            if (itemName !== '') {
-                // Update the count for the entered item
-                if (itemCounts[itemName]) {
-                    itemCounts[itemName] += 1; // Increment if item exists
-                } else {
-                    itemCounts[itemName] = 1; // Otherwise, set count to 1
-                }
+        if (itemName !== '') {
+            // Update the count for the entered item
+            if (itemCounts[itemName]) {
+                itemCounts[itemName] += 1; // Increment if item exists
+            } else {
+                itemCounts[itemName] = 1; // Otherwise, set count to 1
+            }
 
-                // Clear the input field after submission
-                inputField.value = '';
+            // Clear the input field after submission
+            inputField.value = '';
 
-                // Update the list of items and their counts
-                updateItemList();
+            // Save the updated itemCounts object to localStorage
+            localStorage.setItem('friendsgivingItems', JSON.stringify(itemCounts));
+
+            // Update the list of items and their counts
+            updateItemList();
+        }
+    }
+
+    // Function to update the displayed list of items with counts
+    function updateItemList() {
+        const itemList = document.getElementById('item-list');
+        itemList.innerHTML = '';  // Clear the current list
+
+        // Loop through the itemCounts object and display the items and their counts
+        for (let item in itemCounts) {
+            if (itemCounts.hasOwnProperty(item)) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item}: ${itemCounts[item]}`;
+                itemList.appendChild(listItem);
             }
         }
+    }
+
+    // Call updateItemList to display saved items on page load
+    updateItemList();
+</script>
+
 
         // Function to update the displayed list of items with counts
         function updateItemList() {
