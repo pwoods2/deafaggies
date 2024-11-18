@@ -333,19 +333,31 @@ nav a, .dropbtn {
     background-color: #750000;
 }
 
+/* Calendar Container Styling */
+.calendar-container {
+    max-width: 100%;   /* Ensures the container doesn't exceed the screen width */
+    overflow: hidden;  /* Prevents the image from overflowing its container */
+    display: flex;     /* Allows centering of the image inside */
+    justify-content: center; /* Centers the image horizontally */
+    padding: 10px;     /* Adds padding for space around the image */
+    box-sizing: border-box; /* Ensures padding doesn’t affect the container’s width */
+}
+
 /* Calendar Image Styling */
 .calendar-image {
-    max-width: 100%;   /* Ensures the image can scale down to fit the screen */
-    height: auto;      /* Maintains the aspect ratio of the image */
-    display: block;    /* Prevents unwanted space below the image */
-    margin: 0 auto;    /* Centers the image horizontally */
+    max-width: 100%;  /* Ensures the image scales to fit within the container */
+    height: auto;     /* Maintains aspect ratio */
+    display: block;   /* Prevents unwanted space below the image */
 }
 
 /* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
+    .calendar-container {
+        padding: 5px; /* Reduce padding on smaller screens */
+    }
+
     .calendar-image {
-        max-width: 90%;  /* Reduces max-width for smaller screens */
-        height: auto;    /* Keeps aspect ratio */
-        margin: 0 auto;  /* Centers the image */
+        max-width: 90%;  /* Ensures the image takes up less space on mobile */
+        height: auto;    /* Keeps the aspect ratio */
     }
 }
