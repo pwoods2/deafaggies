@@ -267,24 +267,11 @@
     }
 
     // Call updateItemList to display saved items on page load
-    <script>
-    updateItemList();
+    window.onload = function() {
+        updateItemList(); // Ensure the list is updated after the page loads
+    }
+</script>
 
-     // Function to update the displayed list of items with counts 
-        function updateItemList() {
-            const itemList = document.getElementById('item-list');
-            itemList.innerHTML = '';  // Clear the current list
-
-            // Loop through the itemCounts object and display the items and their counts
-            for (let item in itemCounts) {
-                if (itemCounts.hasOwnProperty(item)) {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = `${item}: ${itemCounts[item]}`;
-                    itemList.appendChild(listItem);
-                }
-            }
-        }
-    </script>
 
     <script>
         // JavaScript to handle navigation
