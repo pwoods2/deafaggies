@@ -14,7 +14,7 @@ body {
 .scrolling-header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Ensures elements are spaced evenly */
     padding: 0px 20%; /* Small padding for flexibility */
     background-color: #626262;
     color: white;
@@ -69,7 +69,8 @@ body {
         width: 100%;
         padding: 10px;
         z-index: 1000;
-        flex-direction: column; /* Stack items for smaller screens */
+        flex-direction: row; /* Ensures items stay on one line */
+        justify-content: space-between; /* Space between elements */
     }
 
     /* Ensure footer stays at the bottom */
