@@ -332,3 +332,11 @@ nav a, .dropbtn {
 .download-btn:hover {
     background-color: #750000;
 }
+
+/* Calendar Image Styling */
+.calendar-image {
+    max-width: 100%;   /* Ensures the image can scale down to fit the screen */
+    height: auto;      /* Maintains the aspect ratio of the image */
+    display: block;    /* Prevents unwanted space below the image */
+    margin: 0 auto;    /* Centers the image horizontally */
+}
