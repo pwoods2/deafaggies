@@ -19,38 +19,18 @@ body {
     background-color: #626262;
     color: white;
     position: fixed;
-    width: 100%;]
+    width: 100%;
     height: 80px;
     z-index: 1000;
     box-sizing: border-box; /* Ensures padding does not cause overflow */
 }
 
-/* Footer Styling 
-.scrolling-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(80, 0, 0, 0.8);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    z-index: 1000;
-}
-
-.footer-image {
-    max-width: 100px;
-    height: auto;
-}
-*/
 /* Content Wrapper with Scrollable Area */
 #content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     padding-top: 70px; /* Offset for fixed header */
-    padding-bottom: 100px; /* Offset for fixed footer */
     height: calc(100vh - 140px); /* Adjust for header and footer heights */
     overflow-y: auto; /* Enables scrolling within the content area */
     box-sizing: border-box; /* Prevents padding from affecting the overall layout */
@@ -74,21 +54,11 @@ body {
         justify-content: space-between; /* Space between elements */
     }
 
-    /* Ensure footer stays at the bottom 
-    .scrolling-footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        padding: 10px;
-        z-index: 1000;
-    }
-
     /* Content scroll behavior on mobile */
     #content {
         padding-top: 70px; /* Top padding for the header */
-        padding-bottom: 70px; /* Bottom padding for the footer */
         overflow-y: scroll; /* Enables scrolling within content */
-        height: calc(100vh - 140px); /* Full height minus header and footer */
+        height: calc(100vh - 70px); /* Full height minus header */
     }
 
     /* Adjust padding for the rest of the layout */
@@ -192,10 +162,6 @@ nav a, .dropbtn {
         justify-content: center;
         gap: 10px;
     }
-
-   /* .header-logo {
-        order: 1; /* Moves logo to a new line on small screens */
-    }
 }
 
 /* Dropdown Menu Styling */
@@ -261,9 +227,9 @@ nav a, .dropbtn {
 /* Officer photo styling */
 .officer-photo {
     width: 100%;
-    max-height: 200px;
-    object-fit: contain;
-    border-radius: 50%; /* Makes the image circular if it's square */
+    aspect-ratio: 1 / 1; /* Ensures a perfect square for circular/oval shape */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    border-radius: 50%; /* Makes the image oval/circular */
     margin-bottom: 10px;
 }
 
@@ -333,33 +299,4 @@ nav a, .dropbtn {
 
 .download-btn:hover {
     background-color: #750000;
-}
-
-/* Calendar Container Styling */
-.calendar-container {
-    max-width: 50%;   /* Ensures the container doesn't exceed the screen width */
-    overflow: hidden;  /* Prevents the image from overflowing its container */
-    display: flex;     /* Allows centering of the image inside */
-    justify-content: center; /* Centers the image horizontally */
-    padding: 10px;     /* Adds padding for space around the image */
-    box-sizing: border-box; /* Ensures padding doesn’t affect the container’s width */
-}
-
-/* Calendar Image Styling */
-.calendar-image {
-    max-width: 100%;  /* Ensures the image scales to fit within the container */
-    height: auto;     /* Maintains aspect ratio */
-    display: block;   /* Prevents unwanted space below the image */
-}
-
-/* Mobile-Specific Adjustments */
-@media (max-width: 768px) {
-    .calendar-container {
-        padding: 5px; /* Reduce padding on smaller screens */
-    }
-
-    .calendar-image {
-        max-width: 90%;  /* Ensures the image takes up less space on mobile */
-        height: auto;    /* Keeps the aspect ratio */
-    }
 }
