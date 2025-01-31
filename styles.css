@@ -129,7 +129,7 @@ body {
 }
 
 .header-logo img {
-    height: 40px;
+    height: 60px;
     max-width: 100%;
 }
 
@@ -149,8 +149,8 @@ body {
 
 nav a, .dropbtn {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 0.9em;
-    padding: 6px 12px;
+    font-size: 1.1em;
+    padding: 8px 16px;
     color: white;
     text-decoration: none;
     white-space: nowrap; /* Prevents text from wrapping on narrow screens */
@@ -172,8 +172,8 @@ nav a, .dropbtn {
 .dropbtn {
     background-color: #500000;
     color: white;
-    font-size: 0.9em;
-    padding: 6px 12px;
+    font-size: 1.1em;
+    padding: 8px 16px;
     border: none;
     cursor: pointer;
 }
