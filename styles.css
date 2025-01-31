@@ -15,16 +15,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Ensures elements are spaced evenly */
-    padding: 0px 20%; /* Small padding for flexibility */
+    padding: 20px 20%; /* Small padding for flexibility */
     background-color: #626262;
     color: white;
     position: fixed;
-    width: 100%;
+    width: 100%;]
+    height: 80px;
     z-index: 1000;
     box-sizing: border-box; /* Ensures padding does not cause overflow */
 }
 
-/* Footer Styling */
+/* Footer Styling 
 .scrolling-footer {
     position: fixed;
     bottom: 0;
@@ -42,7 +43,7 @@ body {
     max-width: 100px;
     height: auto;
 }
-
+*/
 /* Content Wrapper with Scrollable Area */
 #content {
     max-width: 1200px;
@@ -73,7 +74,7 @@ body {
         justify-content: space-between; /* Space between elements */
     }
 
-    /* Ensure footer stays at the bottom */
+    /* Ensure footer stays at the bottom 
     .scrolling-footer {
         position: fixed;
         bottom: 0;
