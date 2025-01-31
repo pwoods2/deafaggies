@@ -260,7 +260,7 @@ nav a, .dropbtn {
 /* Officer photo styling */
 .officer-photo {
     width: 100%;
-    height: 150px;
+    max-height: 100%;
     border-radius: 50%; /* Makes the image circular if it's square */
     margin-bottom: 10px;
 }
