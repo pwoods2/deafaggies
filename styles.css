@@ -335,7 +335,7 @@ nav a, .dropbtn {
 
 /* Calendar Container Styling */
 .calendar-container {
-    max-width: 100%;   /* Ensures the container doesn't exceed the screen width */
+    max-width: 50%;   /* Ensures the container doesn't exceed the screen width */
     overflow: hidden;  /* Prevents the image from overflowing its container */
     display: flex;     /* Allows centering of the image inside */
     justify-content: center; /* Centers the image horizontally */
