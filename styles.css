@@ -227,8 +227,8 @@ nav a, .dropbtn {
 /* Officer photo styling */
 .officer-photo {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Ensures a perfect square for circular/oval shape */
     object-fit: cover; /* Ensures the image covers the entire area without distortion */
+   /* max-height: 100%; */
     border-radius: 50%; /* Makes the image oval/circular */
     margin-bottom: 10px;
 }
