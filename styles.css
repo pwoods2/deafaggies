@@ -339,6 +339,14 @@ nav a, .dropbtn {
     text-align: center;
 }
 
+.photos-container {
+    display: none;
+}
+
+#gallery .photos-container {
+    display: block;
+}
+
 .photos-container h3 {
     margin-bottom: 15px;
     font-size: 1.5em;
