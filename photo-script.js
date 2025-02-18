@@ -1,5 +1,5 @@
 // photo-script.js
-
+ 
 // Gallery Slideshow
 let currentSlideIndex = 0;
 const slides = document.querySelectorAll('.gallery-item');
