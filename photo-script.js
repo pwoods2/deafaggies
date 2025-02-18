@@ -1,8 +1,6 @@
-// photo-script.js
- 
 // Gallery Slideshow
 let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.gallery-item');
+const slides = document.querySelectorAll('.photo');
 
 // Function to show the current slide and hide others
 function showSlide(index) {
@@ -30,15 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlideIndex);
 });
 
-// Next and previous button event listeners (if you have such buttons)
+// Next and previous button event listeners
 document.getElementById('next-btn').addEventListener('click', () => {
     showSlide(currentSlideIndex + 1);
 });
 document.getElementById('prev-btn').addEventListener('click', () => {
     showSlide(currentSlideIndex - 1);
 });
-
-// Optionally, auto-change slides every 3 seconds
-setInterval(() => {
-    showSlide(currentSlideIndex + 1);
-}, 3000);
