@@ -362,6 +362,10 @@ nav a, .dropbtn {
     display: none;
 }
 
+.photo:first-of-type {
+    display: block;  /* Show the first image on load */
+}
+
 .photo img {
     width: 100%;
     border-radius: 10px;
@@ -392,14 +396,4 @@ nav a, .dropbtn {
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Photo Fading Effects */
-.fade {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.fade.show {
-    opacity: 1;
 }
