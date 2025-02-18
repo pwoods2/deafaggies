@@ -284,10 +284,12 @@
             slides.forEach((slide, i) => slide.style.display = i === 0 ? 'block' : 'none');
         }
 
-        document.addEventListener("DOMContentLoaded", () => {
-            initializeSlides('photos1');
-            initializeSlides('photos2');
-        });
+         document.addEventListener("DOMContentLoaded", () => {
+    if (document.querySelector("#gallery")) {
+        initializeSlides('photos1');
+        initializeSlides('photos2');
+        }
+    });
     </script>
         
     <!--- Javascript to handle navigation ---> 
