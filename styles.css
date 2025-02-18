@@ -40,6 +40,10 @@ body {
     margin-bottom: 10px;
 }
 
+/* Ensure all sections are hidden by default */
+.content-section {
+    display: none;
+}
 /* Mobile-First: Responsive Adjustments */
 @media (max-width: 768px) {
     /* Ensure the header is still fixed at the top */
