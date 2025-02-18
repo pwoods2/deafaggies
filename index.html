@@ -243,64 +243,55 @@
 
         <div id="gallery" class="content-section">
             <h2>Gallery</h2>
-            <p>Images from past events will be displayed here...</p>
+            <p>Check out some of our past events!</p>
         </div>
-    </div>
+        <div class="photos-container">
+            <h3>Top Golf Valentine's Party</h3>
+            <div class="photos" id="photos1">
+                <div class="photo fade"><img src="image1.jpg" alt="Image 1"></div>
+                <div class="photo fade"><img src="image2.jpg" alt="Image 2"></div>
+                <div class="photo fade"><img src="image3.jpg" alt="Image 3"></div>
+                <a class="prev" onclick="changeSlide(-1, 'photos1')">&#10094;</a>
+                <a class="next" onclick="changeSlide(1, 'photos1')">&#10095;</a>
+            </div>
+        </div>
 
-    
- <!-- JavaScript to handle the item count logic -->
-<script>
-    // Object to store the counts of each Friendsgiving item
-    let itemCounts = JSON.parse(localStorage.getItem('friendsgivingItems')) || {};
+        <!--- Additional Containers
+        <div class="photos-container">
+            <h3>Name of Event Here</h3>
+            <div class="photos" id="photos2">
+                <div class="photo fade"><img src="gallery1.jpg" alt="Gallery Image 1"></div>
+                <div class="photo fade"><img src="gallery2.jpg" alt="Gallery Image 2"></div>
+                <div class="photo fade"><img src="gallery3.jpg" alt="Gallery Image 3"></div>
+                <a class="prev" onclick="changeSlide(-1, 'photos2')">&#10094;</a>
+                <a class="next" onclick="changeSlide(1, 'photos2')">&#10095;</a>
+            </div>
+        </div>
 
-    // Function to handle item submission
-    function submitItem() {
-        const inputField = document.getElementById('friendsgiving-input');
-        const itemName = inputField.value.trim();  // Get the entered item, trimmed
 
-        if (itemName !== '') {
-            // Update the count for the entered item
-            if (itemCounts[itemName]) {
-                itemCounts[itemName] += 1; // Increment if item exists
-            } else {
-                itemCounts[itemName] = 1; // Otherwise, set count to 1
-            }
-
-            // Clear the input field after submission
-            inputField.value = '';
-
-            // Save the updated itemCounts object to localStorage
-            localStorage.setItem('friendsgivingItems', JSON.stringify(itemCounts));
-
-            // Update the list of items and their counts
-            updateItemList();
+    <!--- Javascript to handle photos --->
+     <script>
+        function changeSlide(n, photosId) {
+            let slides = document.querySelectorAll(`#${photosId} .photo`);
+            let index = [...slides].findIndex(slide => slide.style.display === 'block');
+            slides[index].style.display = 'none';
+            let newIndex = (index + n + slides.length) % slides.length;
+            slides[newIndex].style.display = 'block';
         }
-    }
 
-    // Function to update the displayed list of items with counts
-    function updateItemList() {
-        const itemList = document.getElementById('item-list');
-        itemList.innerHTML = '';  // Clear the current list
-
-        // Loop through the itemCounts object and display the items and their counts
-        for (let item in itemCounts) {
-            if (itemCounts.hasOwnProperty(item)) {
-                const listItem = document.createElement('li');
-                listItem.textContent = `${item}: ${itemCounts[item]}`;
-                itemList.appendChild(listItem);
-            }
+        function initializeSlides(photosId) {
+            let slides = document.querySelectorAll(`#${photosId} .photo`);
+            slides.forEach((slide, i) => slide.style.display = i === 0 ? 'block' : 'none');
         }
-    }
 
-    // Call updateItemList to display saved items on page load
-    window.onload = function() {
-        updateItemList(); // Ensure the list is updated after the page loads
-    }
-</script>
-
-
+        document.addEventListener("DOMContentLoaded", () => {
+            initializeSlides('photos1');
+            initializeSlides('photos2');
+        });
+    </script>
+        
+    <!--- Javascript to handle navigation ---> 
     <script>
-        // JavaScript to handle navigation
         const links = document.querySelectorAll('.dropdown-content a');
         const contentDivs = document.querySelectorAll('#content > .content-section');
 
