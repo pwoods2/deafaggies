@@ -44,6 +44,7 @@ body {
 .content-section {
     display: none;
 }
+
 /* Mobile-First: Responsive Adjustments */
 @media (max-width: 768px) {
     /* Ensure the header is still fixed at the top */
