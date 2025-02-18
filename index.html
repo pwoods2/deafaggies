@@ -244,7 +244,6 @@
         <div id="gallery" class="content-section">
             <h2>Gallery</h2>
             <p>Check out some of our past events!</p>
-        </div>
         <div class="photos-container">
             <h3>Top Golf Valentine's Party</h3>
             <div class="photos" id="photos1">
@@ -255,7 +254,7 @@
                 <a class="next" onclick="changeSlide(1, 'photos1')">&#10095;</a>
             </div>
         </div>
-
+        </div>
         <!--- Additional Containers
         <div class="photos-container">
             <h3>Name of Event Here</h3>
@@ -268,29 +267,8 @@
             </div>
         </div>
 
-
-    <!--- Javascript to handle photos --->
-     <script>
-        function changeSlide(n, photosId) {
-            let slides = document.querySelectorAll(`#${photosId} .photo`);
-            let index = [...slides].findIndex(slide => slide.style.display === 'block');
-            slides[index].style.display = 'none';
-            let newIndex = (index + n + slides.length) % slides.length;
-            slides[newIndex].style.display = 'block';
-        }
-
-        function initializeSlides(photosId) {
-            let slides = document.querySelectorAll(`#${photosId} .photo`);
-            slides.forEach((slide, i) => slide.style.display = i === 0 ? 'block' : 'none');
-        }
-
-         document.addEventListener("DOMContentLoaded", () => {
-    if (document.querySelector("#gallery")) {
-        initializeSlides('photos1');
-        initializeSlides('photos2');
-        }
-    });
-    </script>
+<!--- Scripts --->
+    <script src="photo-script.js"></script>
         
     <!--- Javascript to handle navigation ---> 
     <script>
