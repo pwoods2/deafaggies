@@ -13,12 +13,12 @@ function showSlide(index) {
         currentSlideIndex = index;
     }
 
-    // Hide all slides
+    // Hide all slides and show the current one
     slides.forEach((slide, idx) => {
         if (idx === currentSlideIndex) {
-            slide.style.display = 'block';
+            slide.style.display = 'block';  // Show the current slide
         } else {
-            slide.style.display = 'none';
+            slide.style.display = 'none';   // Hide other slides
         }
     });
 }
