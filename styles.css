@@ -227,7 +227,6 @@ nav a, .dropbtn {
 .officer-photo {
     width: 100%;
     object-fit: cover; /* Ensures the image covers the entire area without distortion */
-   /* max-height: 100%; */
     border-radius: 50%; /* Makes the image oval/circular */
     margin-bottom: 10px;
 }
@@ -329,7 +328,9 @@ nav a, .dropbtn {
     }
 }
 
-.photos-container {
+/* Photos Section */
+#gallery .photos-container {
+    display: block;
     margin: 20px auto;
     width: 80%;
     background: white;
@@ -337,14 +338,6 @@ nav a, .dropbtn {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-.photos-container {
-    display: none;
-}
-
-#gallery .photos-container {
-    display: block;
 }
 
 .photos-container h3 {
@@ -396,3 +389,12 @@ nav a, .dropbtn {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Photo Fading Effects */
+.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade.show {
+    opacity: 1;
+}
