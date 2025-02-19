@@ -1,6 +1,6 @@
         const links = document.querySelectorAll('.dropdown-content a');
         const contentDivs = document.querySelectorAll('#content > .content-section');
-
+ 
         links.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
