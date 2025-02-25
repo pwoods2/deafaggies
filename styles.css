@@ -82,9 +82,10 @@ body {
 
 /* Social button styles */
 .social-button {
-    display: flex;
+    display: inline-flex; /* Use inline-flex to avoid full-width stretching */
     align-items: center;
-    padding: 20px 30px;
+    gap: 10px; /* Add spacing between icon/image and text */
+    padding: 15px 25px; /* Slightly reduced padding */
     text-decoration: none;
     background-color: #f0f0f0;
     border: 2px solid #ddd;
@@ -94,6 +95,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     color: #333;
+    white-space: nowrap; /* Prevents text from wrapping */
 }
 
 /* Social button hover effect */
@@ -101,6 +103,16 @@ body {
     background-color: #e6e6e6;
     transform: scale(1.05);
 }
+
+/* Ensure the image inside the button doesn't stretch */
+.social-button img {
+    max-height: 40px; /* Adjust as needed */
+    max-width: 100px; /* Prevents excessive horizontal stretching */
+    height: auto;
+    width: auto;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
 
 /* Social button icon */
 .button-icon {
